@@ -1,6 +1,13 @@
 name "xlsxio-d"
+version "0.1.3"
 description "Bindings for xlsxio Excel reader/writer library"
 authors "Laeeth Isharc"
 copyright "Copyright © 2019, Laeeth Isharc"
 license "mit"
 targetType "library"
+libs "xlsxio_read" "xlsxio_write"
+sourcePaths "source/"
+importPaths "source/"
+configuration "library" {
+	targetType "library"
+}
