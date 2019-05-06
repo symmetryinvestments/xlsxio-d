@@ -12,7 +12,7 @@ configuration "library-char" {
 	targetType "library"
 }
 
-configuration "library-char" {
+configuration "library-wide" {
 	versions "XmlUnicode"
 	targetType "library"
 }
