@@ -22,8 +22,18 @@ THE SOFTWARE.
 
 import core.stdc.time: time_t;
 
-alias wchar_t = wchar;
-alias XLSXIOCHAR = wchar_t;
+version(XmlUnicode)
+{
+	alias wchar_t = wchar;
+	alias XLSXIOCHAR = wchar_t;
+	pragma(msg, "building with XLSXIOCHAR as wchar");
+}
+else
+{
+	alias XLSXIOCHAR = char;
+	pragma(msg, "building with XLSXIOCHAR as char");
+}
+
 
 extern(C) @nogc nothrow:
 struct xlsxio_read_struct;
